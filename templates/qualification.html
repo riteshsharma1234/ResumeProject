@@ -1,0 +1,43 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block title %}
+<title>Qualification Page</title>
+{% endblock title %}
+
+
+{% block css %}
+{% endblock css%}
+
+{% block body %}
+       <!-- heading  -->
+
+
+       <div class="container bg-primary p-2 text-center mb-5 text-light rounded shadow" >
+        <h1 class="display-6">Qualification Details</h1>
+
+    </div>
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <th>SrNO</th>
+                <th>Study</th>
+                <th>Board</th>
+                <th>Marks/CGPA</th>
+            </thead>
+
+
+            <tbody>
+                {% for key,value in study.items %}
+                <tr>
+                    {% for k,v in value.items %}
+                    <td>{{v}}</td>
+                    {% endfor %}
+                </tr>
+
+                {% endfor %}
+            </tbody>
+            
+                
+{% endblock body %}

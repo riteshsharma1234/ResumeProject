@@ -1,0 +1,43 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block title %}
+<title>Projects Page</title>
+{% endblock title %}
+
+
+{% block css %}
+{% endblock css%}
+
+{% block body %}
+   
+
+
+       <div class="container bg-dark p-2 text-center mb-5 text-light rounded shadow" >
+        <h1 class="display-6">Projects Details</h1>
+
+    </div>
+
+    <div class="container">
+        <table class="table bg-success shadow text-light">
+            <thead>
+                <th>SrNO</th>
+                <th>Project Name</th>
+                <th>Technology</th>
+                <th>year</th>
+            </thead>
+
+            
+            <tbody>
+                {% for key,value in projects.items %}
+                <tr>
+                    {% for k,v in value.items %}
+                    <td>{{v}}</td>
+                    {% endfor %}
+                </tr>
+
+                {% endfor %}
+            </tbody>
+            
+
+{% endblock body %}
